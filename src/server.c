@@ -6,7 +6,7 @@
 /*   By: isel-kha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 00:00:00 by isel-kha          #+#    #+#             */
-/*   Updated: 2025/02/22 03:55:19 by isel-kha         ###   ########.fr       */
+/*   Updated: 2025/02/22 05:33:31 by isel-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "minitalk.h"
@@ -23,7 +23,10 @@ void	ft_handle_signal(int sig, siginfo_t *info, void *context)
 	g_data.bit_position++;
 	if (g_data.bit_position == 8)
 	{
-		ft_putchar_fd(g_data.c, 1);
+		if (g_data.c == 0)
+			ft_putchar_fd('\n', 1);
+		else
+			ft_putchar_fd(g_data.c, 1);
 		g_data.c = 0;
 		g_data.bit_position = 0;
 	}
