@@ -6,7 +6,7 @@
 /*   By: isel-kha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 00:00:00 by isel-kha          #+#    #+#             */
-/*   Updated: 2025/02/25 05:49:38 by isel-kha         ###   ########.fr       */
+/*   Updated: 2025/02/28 21:51:19 by isel-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_send_char(int pid, unsigned char c)
 			kill(pid, SIGUSR2);
 		else
 			kill(pid, SIGUSR1);
-		usleep(100);
+		usleep(900);
 		bit++;
 	}
 }
