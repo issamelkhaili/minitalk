@@ -6,7 +6,7 @@
 /*   By: isel-kha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 00:00:00 by isel-kha          #+#    #+#             */
-/*   Updated: 2025/02/28 21:51:19 by isel-kha         ###   ########.fr       */
+/*   Updated: 2025/02/28 22:59:51 by isel-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@ int	main(int argc, char **argv)
 	{
 		ft_putstr_fd("Usage: ./client [server_pid] [string_to_send]\n", 1);
 		return (1);
+	}
+	if ((ft_atoi(argv[1])) == 2147483647)
+	{
+		ft_putstr_fd("Invalid Pid\n", 1);
 	}
 	pid = ft_atoi(argv[1]);
 	if (pid <= 0)

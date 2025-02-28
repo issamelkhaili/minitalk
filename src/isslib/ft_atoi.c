@@ -6,7 +6,7 @@
 /*   By: isel-kha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 03:05:16 by isel-kha          #+#    #+#             */
-/*   Updated: 2025/02/28 22:20:47 by isel-kha         ###   ########.fr       */
+/*   Updated: 2025/02/28 22:56:38 by isel-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_atoi(const char *str)
 	{
 		result = result * 10 + (str[i] - '0');
 		if (result > 2147483647 && sign == 1)
-			return (2147483647);
+			return (2147483650);
 		if (result > 2147483648 && sign == -1)
-			return (-2147483648);
+			return (2147483650);
 		i++;
 	}
 	return ((int)(result * sign));

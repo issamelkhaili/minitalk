@@ -6,7 +6,7 @@
 /*   By: isel-kha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 00:00:00 by isel-kha          #+#    #+#             */
-/*   Updated: 2025/02/25 05:49:48 by isel-kha         ###   ########.fr       */
+/*   Updated: 2025/02/28 22:54:15 by isel-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,14 @@ void	ft_print_pid(void)
 	ft_putstr_fd("\n", 1);
 }
 
-int	main(void)
+int	main(int argc, char **argv)
 {
+	if (argc != 1)
+	{
+		ft_putstr_fd("Usage: ./server\n", 1);
+		return (1);
+	}
+	ft_atoi(&argv[0][1]);
 	g_data.c = 0;
 	g_data.bit_position = 0;
 	g_data.client_pid = 0;
